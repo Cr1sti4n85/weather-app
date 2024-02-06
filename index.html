@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Dojo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loader"></div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-elements">
+                <h1>Dojo Weather</h1>
+
+                <form class="search-form">
+                    <div class="mb-3">
+                        <label for="input-city" class="form-label fs-5">Enter city name</label>
+                        <input type="text" class="form-control" id="input-city" aria-describedby="citySearch" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-search">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main class="mb-5">
+        <div class="container d-flex justify-content-between mt-4 mb-4 city-info-cnt">
+            <section class="mb-3">
+                <h2 class="city-name"></h2>
+                <h4 class="city-region"></h4>
+            </section>
+            <form action="">
+                <div class="form-floating">
+                    <select id="floatSelect" class="form-select" style="flex: 1">
+                        <!-- onchange="cambio_temperatura()" -->
+                        <option>Show temperature</option>
+                        <option>C</option>
+                        <option>F</option>
+                    </select>
+                    <label for="floatingSelect">Choose</label>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="row g-4 card-container"></div>
+
+        </div>
+        <dialog data-modal>
+            <div class="error-message"></div>
+            <button data-close-modal>Close</button>
+        </dialog>
+    </main>
+    <footer class="d-flex justify-content-center align-items-center pt-4">
+        <div class="container bg-light border border-black p-3 remove-cookie">
+            <div class="cookie d-flex justify-content-evenly align-items-center">
+                <div>
+                    <img class="img-fluid d-none d-sm-block" src="./assets/img/cookie.png" alt="">
+
+                </div>
+                <div>
+                    <h4>Cookie time!</h4>
+                    <p>
+                        We use cookies to improve the experience.
+                    </p>
+
+                </div>
+                <button class="btn btn-info align-self-center btn-cookie">Accept</button>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="d-flex align-items-center">
+                <p class="mb-0 me-3">Cristian Pérez Lecaros</p>
+                <a href="https://github.com/Cr1sti4n85/weather-app" target="_blank"><i
+                        class="bi bi-github fs-3"></i></a>
+            </div>
+            <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
+        </div>
+
+
+    </footer>
+    <script src="./js/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
