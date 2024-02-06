@@ -4,4 +4,5 @@ export const replaceCharacter = (cityName) => {
     const newName = cityName.replace("ñ", "n");
     return newName;
   }
+  return cityName;
 };
