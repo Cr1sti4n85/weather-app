@@ -8,6 +8,7 @@ import {
   searchByLocation,
 } from "./rendering.js";
 import { closeError, renderError } from "./error.js";
+import { replaceCharacter } from "./helper/replace.js";
 //Global variable
 const cardContainer = document.querySelector(".card-container");
 
@@ -37,6 +38,7 @@ const getLocation = async () => {
 const getForecastByName = async (city) => {
   try {
     showSpinner();
+    city = replaceCharacter(city);
     const data = await getForecast({ city });
     if (data.error) throw data.error;
     deleteCards(cardContainer);
