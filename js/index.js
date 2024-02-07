@@ -47,7 +47,6 @@ const getForecastByName = async (city) => {
   } catch (error) {
     hideSpinner();
     renderError(error.message);
-    closeError();
   }
 };
 
@@ -56,6 +55,7 @@ function init() {
   switchUnits();
   searchByLocation(getForecastByName);
   removeCookie();
+  closeError();
 }
 
 init();
